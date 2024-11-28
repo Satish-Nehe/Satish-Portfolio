@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+:root {
+  --primary-bg-color: #000;
+  --primary-text-color: #fff;
+  --common-padding: 0 8vw;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+}
+a {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--common-padding);
+}
+header img{
+    margin-top: 50px;
+}
+header .options {
+  cursor: pointer;
+}
+main {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* margin-bottom: 20px; */
+  padding-bottom: 100px;
+}
+main h1 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 96px;
+  margin-bottom: 20px;
+}
+main p{
+    font-size:36px ;
+}
+.options-container {
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  transform: translateX(100vw);
+  transition: transform 0.5s ease-in-out;
+}
+.active {
+  transform: translateX(0);
+}
+.main-body{
+    height: 100vh;
+    width: 100%;
+}
+.main-body .about-me{
+    max-width: 560px;
+    gap:25px;
+    height: 184px;
+    margin-left: 31%;
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    align-content: center;
+    justify-content: center;
+    /* background-color: #fff; */
+}
+.about-me p{
+    font-size: 16px;
+    font-family: "roboto";
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.about-me p:hover{
+  transform: scale(1.05);
+  border-color: #007BFF;
+}
+.about-me h1{
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: rgb(17, 17, 212);
+  text-align: center;
+}
+
+/* General Styles */
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+} */
+
+/* Skills Section */
+#skills {
+  margin-top: 120px;
+  padding: 50px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: rgb(17, 17, 212);
+}
+
+.skills-container {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.skill-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-card h3 {
+  font-size: 1.5em;
+  color: #007BFF;
+  margin-bottom: 15px;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-card li {
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  border-color: #007BFF;
+}
+
+.my-projects{
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 80px;
+}
+.project{
+    display: flex;
+    gap: 90px;
+   
+}
+.project div{
+    /* border: 2px solid black; */
+    width: 360px;
+    height: 455px;
+    border-radius: 20px;
+    /* position: relative; */
+    /* background: url(https://s3-alpha-sig.figma.com/img/22fb/5c14/cb4e7276170dbe987e0f767228c93b4e?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DKGGDSnVOqfDj1CspHrIHQRdmzUDdtwLQ47i~QBF0~S0ShIEq9nOtdF3~RH-Hd4GsD0msN09PWpifSEG0gQHZXbHEO4YvnFjDasC8YB4YhOaLjIl9XvMOjIzL4ceKPthN~zIFsVsfH-upf950de~JKsc5GqWTlyghd22Etgn8XcAajznK3z2z3us9LgKJjsUK5ASfERcLhYB~o7v4nhhzHXjIYoLcm1q3kEpTirOKGnzTzBWBpAlWlPP1n4W~xj0yHrr7aSV4rK33dB05f2XPenIbN-1-jNmOk4dlG4WkJ7-RRhxFgRkMDU5IXYkWaf8i~vu4761D0Vbl7SsdXi7jQ__); */
+
+}
+.project p{
+  font-weight: bold;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: #fff; */
+  /* position: absolute;
+  padding: 10px;
+  z-index: 1; */
+}
+.project .project-1{
+   background-image: url('medicine.jpeg');
+   background-size: cover;
+   background-position: center;
+  /* background: url(https://www.pexels.com/photo/thermometer-on-medical-pills-139398/); */
+  /* background: url(https://www..com/url?sa=i&url=https%3A%2F%2Fmedshadow.org%2Fwhat-are-long-term-effects-of-medicine%2F&psig=AOvVaw30JjIh7wwRFMsz2ivfhZ2E&ust=1732354472443000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjEgIfS74kDFQAAAAAdAAAAABAE); */
+}
+.project .project-2{
+  background-image: url('employee.jpeg');
+  background-size:cover ;
+  background-position: center;
+}
+.project .project-3{
+  background-image: url('portfolio.png');
+  background-size:cover ;
+  background-position: center;
+}
+.project div:hover{
+    /* transform: translateX(12px) translateY(12px); */
+    transition: all 0.6s ease;   
+    transform: scale(1.1);
+}
+.project .line-1{
+    font-size: 20px;
+    font-family: "roboto";
+    padding: 10px 10px;
+}
+
+.project .line-2{
+    font-size: 16px;
+    font-family: "roboto";
+    padding: 10px 10px;
+}
+/* .buttons button{
+    width:240px;
+    height: 60px;
+    font-size: 16px;
+    background-color: #D9D9D9;
+    margin-right: 70px
+} */
+/* .button-1{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+  }
+  .button-2{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+  } */
+   .buttons button{
+    /* display: flex;
+    flex-direction: row;
+    gap:10px; */
+    width:240px;
+    height: 60px;
+    /* margin: 70px; */
+    font-size: 16px;
+    background-color: #D9D9D9;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #3e3e3e;
+    /* background-color: #007BFF; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+   }
+  .buttons button:hover {
+    background-color: #0056b3;
+    color:white
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  .footer{
+    margin-top: 100px;
+    padding: var(--common-padding);
+    width:100%;
+    height:400px;
+    background-color: var(--primary-bg-color);
+    display: flex ;
+    border: 2px solid white; 
+  }
+  .footer div{
+    width:30%;
+    /* border: 2px solid white; */
+  }
+  .footer .content-1{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    justify-content: center;
+    gap:30px;
+    margin-top:200px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .footer p{
+    color:#fff;
+  }
+  
+  .footer .content-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    margin-top: 200px;
+    margin-left: 150px;
+
+  }
+  .footer .content-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 150px;
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-me,
+    .my-skills,
+    .my-projects {
+      margin: 0 auto;
+      width: 90%;
+    }
+  
+    .project {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg-color: #000;
+  --primary-text-color: #fff;
+  --common-padding: 0 8vw;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+}
+a {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--common-padding);
+}
+header img{
+    margin-top: 50px;
+}
+header .options {
+  cursor: pointer;
+}
+main {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+main h1 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 96px;
+  padding-bottom: 20px;
+}
+main p{
+    font-size:36px ;
+}
+.options-container {
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  transform: translateX(100vw);
+  transition: transform 0.5s ease-in-out;
+}
+.active {
+  transform: translateX(0);
+}
+
+.main-body{
+    padding:var(--common-padding);
+    height:920px;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2 , 400px);
+    margin-top:250px;
+    margin-bottom: 80px;
+    gap:100px;
+    justify-content: center;
+    /* margin-left: 100px; */
+}
+.main-body div{
+    /* border: 2px solid black; */
+    /* background: url(https://s3-alpha-sig.figma.com/img/22fb/5c14/cb4e7276170dbe987e0f767228c93b4e?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DKGGDSnVOqfDj1CspHrIHQRdmzUDdtwLQ47i~QBF0~S0ShIEq9nOtdF3~RH-Hd4GsD0msN09PWpifSEG0gQHZXbHEO4YvnFjDasC8YB4YhOaLjIl9XvMOjIzL4ceKPthN~zIFsVsfH-upf950de~JKsc5GqWTlyghd22Etgn8XcAajznK3z2z3us9LgKJjsUK5ASfERcLhYB~o7v4nhhzHXjIYoLcm1q3kEpTirOKGnzTzBWBpAlWlPP1n4W~xj0yHrr7aSV4rK33dB05f2XPenIbN-1-jNmOk4dlG4WkJ7-RRhxFgRkMDU5IXYkWaf8i~vu4761D0Vbl7SsdXi7jQ__); */
+    
+        /* width:360;
+        height: 460px; */
+        border-radius: 20px;
+}
+.main-body p{
+  font-weight: bold;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: #fff; */
+  /* position: absolute;
+  padding: 10px;
+  z-index: 1; */
+}
+.main-body .project-1{
+   background-image: url('ClassIQ.jpeg');
+   background-size: cover;
+   background-position: center;
+  /* background: url(https://www.pexels.com/photo/thermometer-on-medical-pills-139398/); */
+  /* background: url(https://www..com/url?sa=i&url=https%3A%2F%2Fmedshadow.org%2Fwhat-are-long-term-effects-of-medicine%2F&psig=AOvVaw30JjIh7wwRFMsz2ivfhZ2E&ust=1732354472443000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjEgIfS74kDFQAAAAAdAAAAABAE); */
+}
+.main-body .project-2{
+  background-image: url('employee.jpeg');
+  background-size:cover ;
+  background-position: center;
+}
+.main-body .project-3{
+  background-image: url('portfolio.png');
+  background-size:cover ;
+  background-position: center;
+}
+.main-body div:hover{
+  transition: all 0.4s ease-in-out;
+  transform: translateX(15px) translateY(-15px);
+}
+.main-body .line-1{
+  font-size: 20px;
+  font-family: "roboto";
+  padding: 10px 10px;
+}
+
+.main-body   .line-2{
+  font-size: 16px;
+  font-family: "roboto";
+  padding: 10px 10px;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+.buttons button{
+  /* display: flex;
+  flex-direction: row;
+  gap:10px; */
+  width:240px;
+  height: 60px; 
+  /* margin: 70px; */
+  font-size: 16px;
+  background-color: #D9D9D9;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #3e3e3e;
+  /* background-color: #007BFF; */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  /* mar */
+
+ }
+.buttons button:hover {
+  background-color: #0056b3;
+  color:white
+}
+.footer{
+  margin-top: 100px;
+  padding: var(--common-padding);
+  width:100%;
+  height:400px;
+  background-color: var(--primary-bg-color);
+  display: flex ;
+  border: 2px solid white; 
+}
+.footer div{
+  width:30%;
+  /* border: 2px solid white; */
+}
+.footer .content-1{
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  justify-content: center;
+  gap:30px;
+  margin-top:200px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer p{
+  color:#fff;
+}
+
+.footer .content-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:30px;
+  margin-top: 200px;
+  margin-left: 150px;
+
+}
+.footer .content-3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 150px;
+}
